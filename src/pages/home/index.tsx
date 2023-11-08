@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
 import { ElButton, ElCheckbox } from 'element-plus'
-import MyTable from '../../components/myTable'
 
-import { tableData, columns } from './constants'
+import MyTable from '@/components/myTable'
+import { columns, tableData } from '@/components/myTable/mock'
 
 export default defineComponent({
 	name: 'Home',
@@ -41,7 +41,7 @@ export default defineComponent({
 										删除
 									</el-button>
 								</>
-							),
+							)
 							// selection: () => <el-checkbox />
 						}}
 					</MyTable>

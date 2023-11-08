@@ -45,7 +45,7 @@ export const columns: ColumnItem[] = [
 	{ prop: 'date', label: '日期', align: 'center' },
 	{ prop: 'name', label: '姓名', align: 'center' },
 	{ prop: 'state', label: '州', align: 'center' },
-	{ prop: 'city', label: '城市', align: 'center'},
+	{ prop: 'city', label: '城市', align: 'center' },
 	{ prop: 'address', label: '地址', align: 'center' },
 	{ prop: 'zip', label: '邮编', align: 'center' },
 	{ prop: 'tag', label: '标签', align: 'center' },
