@@ -3,6 +3,7 @@ import { ElButton, ElCheckbox } from 'element-plus'
 
 import MyTable from '@/components/myTable'
 import { columns, tableData } from '@/components/myTable/mock'
+import MyPagination from '@/components/myPagination'
 
 export default defineComponent({
 	name: 'Home',
@@ -13,6 +14,12 @@ export default defineComponent({
 		}
 		const handleDelete = (row: TableDataItem) => {
 			console.log('row', row)
+		}
+		const handleCurrentChange = (cur: number) => {
+			console.log('cur', cur)
+		}
+		const handleSizeChange = (size: number) => {
+			console.log('size', size)
 		}
 		// const slots = {
 		// 	operation: (row: TableDataItem) => (
@@ -45,6 +52,13 @@ export default defineComponent({
 							// selection: () => <el-checkbox />
 						}}
 					</MyTable>
+					<MyPagination
+						pageTotal={256}
+						page={3}
+						size={10}
+						onCurrentChange={(cur: number) => handleCurrentChange(cur)}
+						onSizeChange={(size: number) => handleSizeChange(size)}
+					/>
 				</div>
 			</>
 		)
